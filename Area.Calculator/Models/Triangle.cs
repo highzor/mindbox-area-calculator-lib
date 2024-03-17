@@ -10,7 +10,7 @@ public class Triangle : IFigure
     private readonly double _b;
     private readonly double _c;
 
-    const double Tolerance = 0.000000001;
+    const double TOLERANCE = 0.000000001;
 
     public Triangle(double a, double b, double c)
     {
@@ -43,7 +43,7 @@ public class Triangle : IFigure
         var sides = new[] { _a, _b, _c };
         var maxSide = sides.Max();
 
-        return Math.Abs(2 * Math.Pow(maxSide, 2) - (Math.Pow(_a, 2) + Math.Pow(_b, 2) + Math.Pow(_c, 2))) < Tolerance;
+        return Math.Abs(2 * Math.Pow(maxSide, 2) - (Math.Pow(_a, 2) + Math.Pow(_b, 2) + Math.Pow(_c, 2))) < TOLERANCE;
     }
 
     public double CalculateArea()
